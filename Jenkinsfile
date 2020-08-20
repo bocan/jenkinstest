@@ -5,6 +5,12 @@ pipeline {
             steps {
                 sh 'go version'
                 sh 'printenv'
+                go build hello.go
+            }
+        }
+        stage('test') {
+            steps {
+                ./hello
             }
         }
     }
