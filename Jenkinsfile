@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'go version'
-                env
+                sh 'printenv'
             }
         }
     }
