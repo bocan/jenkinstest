@@ -9,7 +9,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'go version'
-                sh 'printenv'
+                sh 'printenv | sort'
                 sh 'go build hello.go'
             }
         }
