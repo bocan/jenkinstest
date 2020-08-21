@@ -13,6 +13,11 @@ pipeline {
                 sh 'go build hello.go'
             }
         }
+        stage('Sanity check') {
+            steps {
+                input "Does the staging environment look ok?"
+            }
+        }
         stage('test') {
             steps {
                 sh './hello'
